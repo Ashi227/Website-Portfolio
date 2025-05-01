@@ -241,8 +241,8 @@
     display: block;
   }
 
-  /* Projects Section */
-  .projects-section {
+/* Projects Section */
+.projects-section {
     padding: 50px 20px;
     max-width: 1200px;
     margin: auto;
@@ -250,61 +250,104 @@
     opacity: 0;
     animation: fadeIn 1s ease-out forwards 1.2s;
   }
-
+  
   .projects-section h2 {
     font-size: 2.5rem;
     margin-bottom: 10px;
     color: #ccc;
   }
-
+  
   .projects-section p {
     color: #aaa;
     margin-bottom: 30px;
     font-size: 1rem;
   }
-
+  
   .project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Exactly 4 columns */
+    gap: 30px;
   }
-
+  
   .project-card {
     background-color: #fff;
-    padding: 20px;
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 260px;
     transition: all 0.4s ease;
     transform: perspective(1000px) rotateX(0deg);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
   }
-
+  
   .project-card:hover {
     transform: translateY(-10px) perspective(1000px) rotateX(10deg);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   }
-
+  
   .project-card img {
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
     transition: transform 0.3s ease;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
   }
-
+  
   .project-card:hover img {
     transform: scale(1.05);
   }
-
+  
+  .project-card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
   .project-card h3 {
     margin: 0 0 10px;
     font-size: 1.2rem;
     color: #2b2b2b;
   }
-
+  
   .project-card p {
     font-size: 0.95rem;
     color: #555;
     margin-bottom: 15px;
+    flex-grow: 1;
   }
+  
+  .btn-code {
+    background-color: #4a00e0;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: center;
+    margin-top: auto;
+  }
+  
+  .btn-code:hover {
+    background-color: #3700b3;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+    .project-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .project-grid {
+      grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+  }
+  
 
   .btn-toggle {
     background-color: #7c3aed;
@@ -429,4 +472,20 @@
       flex-direction: column;
       gap: 1.5rem;
     }
+  }
+  
+  .download-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: #7c3aed;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .download-btn:hover {
+    background-color: #5f28c9;
   }
