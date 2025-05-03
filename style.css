@@ -17,7 +17,7 @@
     to { opacity: 1; }
   }
 
-  /* Navbar */
+  /*Navbar*/
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -91,7 +91,7 @@
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
   }
 
-  /* Hero Section */
+  /*Hero*/
   .hero {
     display: flex;
     flex-wrap: wrap;
@@ -180,7 +180,7 @@
     transform: scale(1.05) rotate(2deg);
   }
 
-  /* Skills Section */
+  /*Skills*/
   .skills {
     display: flex;
     justify-content: center;
@@ -241,7 +241,7 @@
     display: block;
   }
 
-/* Projects Section */
+/* Projects */
 .projects-section {
     padding: 50px 20px;
     max-width: 1200px;
@@ -265,7 +265,7 @@
   
   .project-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Exactly 4 columns */
+    grid-template-columns: repeat(4, 1fr); /*4 columns*/
     gap: 30px;
   }
   
@@ -338,13 +338,13 @@
   /* Responsive adjustments */
   @media (max-width: 1200px) {
     .project-grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+      grid-template-columns: repeat(2, 1fr);
     }
   }
   
   @media (max-width: 768px) {
     .project-grid {
-      grid-template-columns: 1fr; /* 1 column on mobile */
+      grid-template-columns: 1fr; /* mobile view */
     }
   }
   
@@ -449,7 +449,7 @@
   }
 
   /* Responsive adjustments */
-  @media (max-width: 768px) {
+   @media (max-width: 768px) {
     .hero {
       flex-direction: column;
       text-align: center;
@@ -474,17 +474,6 @@
     }
   }
   
-  .download-btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 10px 20px;
-    background-color: #7c3aed;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
   
   .download-btn:hover {
     background-color: #5f28c9;
